@@ -30,6 +30,7 @@ public class Sphere extends Shape {
 	}
 
 	@Override
+	public
 	float surfaceArea() {
 		//calc suface area
 		return 4.0f * (float)Math.PI * getRadius() * getRadius();
@@ -37,6 +38,7 @@ public class Sphere extends Shape {
 
 
 	@Override
+	public
 	float volume() {
 		// calc volume
 		return 4.0f / 3.0f * (float)Math.PI * (getRadius() * getRadius() * getRadius());

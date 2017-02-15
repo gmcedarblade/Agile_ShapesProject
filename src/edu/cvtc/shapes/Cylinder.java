@@ -50,6 +50,7 @@ public class Cylinder extends Shape {
 	}
     
 	@Override
+	public
 	float surfaceArea() {
 		// calc surface area
 		return 2.0f * (float)Math.PI * getRadius() * getHeight() + 2.0f * (float)Math.PI * (getRadius() * getRadius());
@@ -57,6 +58,7 @@ public class Cylinder extends Shape {
 
 
 	@Override
+	public
 	float volume() {
 		// calc volume
 		return (getRadius() * getRadius()) * (float)Math.PI * getHeight();

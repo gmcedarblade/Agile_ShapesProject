@@ -69,6 +69,7 @@ public class Cuboid extends Shape {
 	
 
 	@Override
+	public
 	float surfaceArea() {
 		//calc suface area
 		float surfaceArea = (getWidth() * getDepth() + getHeight() * getDepth() + getHeight() * getWidth()) * 2.0f; 
@@ -77,6 +78,7 @@ public class Cuboid extends Shape {
 
 
 	@Override
+	public
 	float volume() {
 		// calc volume
 		float volume =  getWidth() * getDepth() * getHeight();
@@ -85,6 +87,7 @@ public class Cuboid extends Shape {
 
 
 	@Override
+	public
 	String render() {
 		// TODO Auto-generated method stub
 		return "Cuboid's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume());
