@@ -66,6 +66,7 @@ public class Cylinder extends Shape {
 
 
 	@Override
+	public
 	String render() {
 		// TODO Auto-generated method stub
 		return "Cylinder's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume());
