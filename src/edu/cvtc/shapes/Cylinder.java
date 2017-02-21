@@ -1,5 +1,6 @@
 package edu.cvtc.shapes;
 
+
 /**
  * @author gcedarblade
  *
@@ -44,7 +45,8 @@ public class Cylinder extends Shape {
 	}
 
 	// constructor
-	public Cylinder(float radius, float height) {
+	public Cylinder(float radius, float height, Dialog dialog) {
+		super(dialog);
 		setRadius(radius);
 		setHeight(height);
 	}
@@ -67,9 +69,9 @@ public class Cylinder extends Shape {
 
 	@Override
 	public
-	String render() {
+	int render() {
 		// TODO Auto-generated method stub
-		return "Cylinder's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume());
+		return displayMessage("Cylinder's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Cylinder");
 	}
 
 }

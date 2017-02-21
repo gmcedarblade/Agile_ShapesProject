@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 
 import edu.cvtc.shapes.Cuboid;
 import edu.cvtc.shapes.Cylinder;
+import edu.cvtc.shapes.MessageBox;
 import edu.cvtc.shapes.Sphere;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -20,7 +21,7 @@ public class ShapesUnitTests {
 
 	@Test
 	public void getCuboidWidth(){
-		Cuboid cube = new Cuboid(2, 2, 2);
+		Cuboid cube = new Cuboid(2, 2, 2, new MessageBox());
 		
 		int expected = 2;
 		int actual = (int) cube.getWidth();
@@ -29,7 +30,7 @@ public class ShapesUnitTests {
 	
 	@Test
 	public void getCuboidHeight(){
-		Cuboid cube = new Cuboid(2, 2, 2);
+		Cuboid cube = new Cuboid(2, 2, 2, new MessageBox());
 		
 		int expected = 2;
 		int actual = (int) cube.getHeight();
@@ -38,7 +39,7 @@ public class ShapesUnitTests {
 	
 	@Test
 	public void getCuboidDepth(){
-		Cuboid cube = new Cuboid(2, 2, 2);
+		Cuboid cube = new Cuboid(2, 2, 2, new MessageBox());
 		
 		int expected = 2;
 		int actual = (int) cube.getDepth();
@@ -55,7 +56,7 @@ public class ShapesUnitTests {
 		if(width < 0|| height < 0 || depth < 0){
 			throw new IllegalArgumentException("Cannot have negative input");
 		} else {
-			Cuboid cube = new Cuboid(width, height, depth);
+			Cuboid cube = new Cuboid(width, height, depth, new MessageBox());
 			int expected = (int) ((cube.getWidth() * cube.getDepth() + cube.getHeight() * cube.getDepth() + cube.getHeight() * cube.getWidth()) * 2.0f);
 			int actual = (int) cube.surfaceArea();
 			assertEquals(expected, actual);
@@ -72,7 +73,7 @@ public class ShapesUnitTests {
 		if (width < 0 || height < 0 || depth < 0) {
 			throw new IllegalArgumentException("Cannot have negative input");
 		} else {
-			Cuboid cube = new Cuboid(width, height, depth);
+			Cuboid cube = new Cuboid(width, height, depth, new MessageBox());
 			int expected = (int) (cube.getWidth() * cube.getDepth() * cube.getHeight());
 			int actual = (int) cube.volume();
 			assertEquals(expected, actual);
@@ -83,7 +84,7 @@ public class ShapesUnitTests {
 	
 	@Test
 	public void getCylinderHeight(){
-		Cylinder cylinder = new Cylinder(3, 3);
+		Cylinder cylinder = new Cylinder(3, 3, new MessageBox());
 		
 		int expected = 3;
 		int actual = (int) cylinder.getHeight();
@@ -92,7 +93,7 @@ public class ShapesUnitTests {
 	
 	@Test
 	public void getCylinderRadius(){
-		Cylinder cylinder = new Cylinder(3, 3);
+		Cylinder cylinder = new Cylinder(3, 3, new MessageBox());
 		
 		int expected = 3;
 		int actual = (int) cylinder.getRadius();
@@ -109,7 +110,7 @@ public class ShapesUnitTests {
 		if (radius < 0 || height < 0) {
 			throw new IllegalArgumentException("Cannot have negative input");
 		} else {
-			Cylinder cylinder = new Cylinder(radius, height);
+			Cylinder cylinder = new Cylinder(radius, height, new MessageBox());
 			int expected = (int) (2.0f * (float)Math.PI * cylinder.getRadius() * cylinder.getHeight() + 2.0f * (float)Math.PI * (cylinder.getRadius() * cylinder.getRadius()));
 			int actual = (int) cylinder.surfaceArea();
 			assertEquals(expected, actual);
@@ -126,7 +127,7 @@ public class ShapesUnitTests {
 		if (radius < 0 || height < 0) {
 			throw new IllegalArgumentException("Cannot have negative input");
 		} else {
-			Cylinder cylinder = new Cylinder(radius, height);
+			Cylinder cylinder = new Cylinder(radius, height, new MessageBox());
 			int expected = (int) ((cylinder.getRadius() * cylinder.getRadius()) * (float)Math.PI * cylinder.getHeight());
 			int actual = (int) cylinder.volume();
 			assertEquals(expected, actual);
@@ -137,7 +138,7 @@ public class ShapesUnitTests {
 	
 	@Test
 	public void getSphereRadius(){
-		Sphere sphere = new Sphere(5);
+		Sphere sphere = new Sphere(5, new MessageBox());
 		int expected = 5;
 		int actual = (int) sphere.getRadius();
 		assertEquals(expected, actual);
@@ -153,7 +154,7 @@ public class ShapesUnitTests {
 		if (radius < 0) {
 			throw new IllegalArgumentException("Cannot have negative input");
 		} else {
-			Sphere sphere = new Sphere(radius);
+			Sphere sphere = new Sphere(radius, new MessageBox());
 			int expected = (int) (4.0f * (float)Math.PI * radius * radius);
 			int actual = (int) sphere.surfaceArea();
 			assertEquals(expected, actual);
@@ -170,7 +171,7 @@ public class ShapesUnitTests {
 		if (radius < 0) {
 			throw new IllegalArgumentException("Cannot have negative input");
 		} else {
-			Sphere sphere = new Sphere(radius);
+			Sphere sphere = new Sphere(radius, new MessageBox());
 			int expected = (int) (4.0f / 3.0f * (float)Math.PI * (radius * radius * radius));
 			int actual = (int) sphere.volume();
 			assertEquals(expected, actual);
@@ -187,7 +188,7 @@ public class ShapesUnitTests {
 		if (radius < 0) {
 			throw new IllegalArgumentException("Cannot have negative input");
 		} else {
-			Sphere sphere = new Sphere(radius);
+			Sphere sphere = new Sphere(radius, new MessageBox());
 			return (int) sphere.volume();
 		}
 	}

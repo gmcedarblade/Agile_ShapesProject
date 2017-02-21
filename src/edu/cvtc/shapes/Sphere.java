@@ -1,5 +1,6 @@
 package edu.cvtc.shapes;
 
+
 /**
  * @author gcedarblade
  *
@@ -25,7 +26,8 @@ public class Sphere extends Shape {
 	}
 
 	// constructor
-	public Sphere(float radius) {
+	public Sphere(float radius, Dialog dialog) {
+		super(dialog);
 		setRadius(radius);
 	}
 
@@ -46,9 +48,9 @@ public class Sphere extends Shape {
 
 
 	@Override
-	String render() {
+	int render() {
 		// TODO Auto-generated method stub
-		return "Sphere's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume());
+		return displayMessage("Sphere's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Sphere");
 	}
 	
 	

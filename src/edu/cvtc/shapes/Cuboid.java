@@ -1,5 +1,7 @@
 package edu.cvtc.shapes;
 
+
+
 public class Cuboid extends Shape {
 	
 	//set variables 
@@ -58,9 +60,9 @@ public class Cuboid extends Shape {
 	}
 
 
-	public Cuboid(float width, float height, float depth) {
+	public Cuboid(float width, float height, float depth, Dialog dialog) {
 		// Set dimensions
-		
+		super(dialog);
 		setWidth(width);
 		setHeight(height);
 		setDepth(depth);
@@ -88,9 +90,9 @@ public class Cuboid extends Shape {
 
 	@Override
 	public
-	String render() {
+	int render() {
 		// TODO Auto-generated method stub
-		return "Cuboid's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume());
+		return displayMessage("Cuboid's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Cubiod");
 	}
 
 }
