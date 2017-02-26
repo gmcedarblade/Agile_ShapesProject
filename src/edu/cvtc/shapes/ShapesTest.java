@@ -29,6 +29,9 @@ public class ShapesTest {
 		cuboid.render();
 		sphere.render();
 		cylinder.render();
+		
+		ShapeFactory shapeFactory = new ShapeFactory(messageBox);
+		Shape cube = shapeFactory.cuboidBuilder(12, 10, 50, messageBox);
 // FOR NOTES...
 		// set JOptionPane
 //		Component frame = null;

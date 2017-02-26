@@ -48,9 +48,9 @@ public class Sphere extends Shape {
 
 
 	@Override
-	int render() {
+	public void render() {
 		// TODO Auto-generated method stub
-		return displayMessage("Sphere's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Sphere");
+		super.getMessageBox().show("Sphere's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Sphere");
 	}
 	
 	

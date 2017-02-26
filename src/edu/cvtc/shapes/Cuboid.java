@@ -89,10 +89,10 @@ public class Cuboid extends Shape {
 
 
 	@Override
-	public
-	int render() {
+	public void render() {
 		// TODO Auto-generated method stub
-		return displayMessage("Cuboid's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Cubiod");
+		//return displayMessage("Cuboid's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Cubiod");
+		super.getMessageBox().show("Cuboid's Surface area: " + String.valueOf(surfaceArea()) + ", Volume: " + String.valueOf(volume()), "Cuboid");
 	}
 
 }

@@ -32,7 +32,7 @@ public class CylinderTest {
 			throw new NegativeNumberException("Neither Radius or Height may not be negative");
 		} else {
 			// 1. Arrange
-			Cylinder cylinder = new Cylinder(radius, height);
+			Cylinder cylinder = new Cylinder(radius, height, null);
 			int expected = (int) (2.0f * (float)Math.PI * cylinder.getRadius() * cylinder.getHeight() + 2.0f * (float)Math.PI * (cylinder.getRadius() * cylinder.getRadius()));
 			
 			// 2. Act
@@ -56,7 +56,7 @@ public class CylinderTest {
 			throw new NegativeNumberException("Neither Radius or Height may not be negative");
 		} else {
 			// 1. Arrange
-			Cylinder cylinder = new Cylinder(radius, height);
+			Cylinder cylinder = new Cylinder(radius, height, null);
 			int expected = (int) (2.0f * (float)Math.PI * cylinder.getRadius() * cylinder.getHeight() + 2.0f * (float)Math.PI * (cylinder.getRadius() * cylinder.getRadius()));
 			
 			// 2. Act
@@ -80,7 +80,7 @@ public class CylinderTest {
 	public void testVolume(float radius, float height) {
 		
 		// 1. Arrange
-		Cylinder cylinder = new Cylinder(radius, height);
+		Cylinder cylinder = new Cylinder(radius, height, null);
 		int expected = (int) ((cylinder.getRadius() * cylinder.getRadius()) * (float)Math.PI * cylinder.getHeight());
 		
 		// 2. Act
@@ -98,7 +98,7 @@ public class CylinderTest {
 	})
 	public void testCylinder(float radius, float height) {
 		// 1. Arrange
-		Cylinder cylinder = new Cylinder(radius, height);
+		Cylinder cylinder = new Cylinder(radius, height, new MessageBoxSub());
 		
 		// 2. Act/Assert
 		cylinder.render();

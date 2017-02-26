@@ -84,11 +84,11 @@ public class ShapesUnitTests {
 	
 	@Test
 	public void getCylinderHeight(){
-		Cylinder cylinder = new Cylinder(3, 3, new MessageBox());
+		Cylinder cylinder = new Cylinder(3.0f, 3.0f, new MessageBox());
 		
-		int expected = 3;
-		int actual = (int) cylinder.getHeight();
-		assertEquals(expected, actual);
+		float expected = 3.0f;
+		float actual = cylinder.getHeight();
+		assertEquals(expected, actual, 0.0001f);
 	}
 	
 	@Test
